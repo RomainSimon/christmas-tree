@@ -5,14 +5,16 @@ Generating trees in terminal
 ## Examples
 
 `node tree 1`
+```
     *
    ***
   *****
  *******
     |
-
+```
 
 `node tree 2`
+```
          *
         ***
        *****
@@ -24,9 +26,10 @@ Generating trees in terminal
    *************
          |
          |
-
+```
 
 `node tree 3`
+```
               *
              ***
             *****
@@ -45,5 +48,6 @@ Generating trees in terminal
              |||
              |||
              |||
+```
 
 etc...
