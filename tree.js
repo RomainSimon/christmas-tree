@@ -8,8 +8,8 @@ let j = 1;
 
 // Building one line of the tree
 const addLine = (o, n)  => {
-  let space = s.repeat((width-n)/2);
-  let block = o.repeat(n);
+  const space = s.repeat((width-n)/2);
+  const block = o.repeat(n);
   return space + block + space + '\n';
 }
 
@@ -27,7 +27,7 @@ const addBlock = (start, nb) => {
 const addTrunk = () => {
   let trunk = '';
   // Always odd to be centered :)
-  let trunkWidth = (steps % 2 === 0) ? steps-1 : steps;
+  const trunkWidth = (steps % 2 === 0) ? steps-1 : steps;
   for (let i=0; i<steps; i++) {
     trunk += addLine(t, trunkWidth);
   }
@@ -36,9 +36,8 @@ const addTrunk = () => {
 
 // Building the whole tree
 const buildTree = () => {
-  let nbLine;
   for (let i=0; i<steps; i++) {
-    let startWidth = j-Math.ceil(i/2)*2;
+    const startWidth = j-Math.ceil(i/2)*2;
     tree += addBlock(startWidth, i+4);
   }
   tree += addTrunk();
@@ -46,6 +45,5 @@ const buildTree = () => {
   if (process.argv[2] < 0) tree = tree.split('\n').reverse().join('\n');
   return tree;
 }
-
 
 console.log(buildTree());
